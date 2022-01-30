@@ -35,3 +35,16 @@ localhost にアクセスし、権限がないと言われたら
 ```docker-compose exec app bash```
 
 ```chown www-data storage/ -R```
+
+
+# Vue.js導入
+Laravel8.xではlaravel-mix6がデフォルトでインストールされている
+
+Vue.js3とTypeScriptのインストールを行う
+
+```
+docker-compose run app npm install vue@next -D
+docker-compose run app npm install vue-loader@next -D
+docker-compose run app npm install @vue/compiler-sfc -D
+docker-compose run app npm install @types/webpack-env typescript ts-loader -D
+```
