@@ -29,3 +29,9 @@ http://127.0.0.1:80/phpinfo.php phpinfoの情報が表示されることを確�
 
 ## Laravelインストール
 ```docker-compose run app composer create-project --prefer-dist "laravel/laravel=8.*" .```
+
+localhost にアクセスし、権限がないと言われたら
+
+```docker-compose exec app bash```
+
+```chown www-data storage/ -R```
